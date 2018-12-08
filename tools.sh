@@ -111,6 +111,7 @@ echo "¦ ###  ##  ##         ## ###    ###  ##         ## ###     ¦"
 echo "¦ ###   ## ##         ## ########    ##         ## ########¦"
 echo "•----------------------------------------------------------•"
 echo ""
+sleep 1
 echo "==========================================================="
 echo "$cyan ¤ Today is:\t\t$reset" `date`; echo ""
 echo "$cyan ¤ Kernel Information: \t$reset" `uname -smr`
@@ -140,6 +141,8 @@ echo "$r|                          |$cyan 21)$reset Maen Games       $r| "
 echo "|     $yellow COMING SOON$r         |----------------------|"
 echo "$reset|                          | $cyan 99)$reset Keluar Aja Lah  |"
 echo "•--------------------------•----------------------•"
+sleep 1
+echo ""
 read -p "Kadal-15~# " pil;
 
 if [ $pil = 1 ] || [ $pil = 01 ]
@@ -162,6 +165,8 @@ sleep 1
 echo "$cyan 1)$reset LTC Click Bot"
 sleep 0.5
 echo "$cyan 2)$reset Doge Click Bot"
+sleep 0.5
+echo "$cyan 3)$reset BCH Click Bot"
 sleep 0.5
 echo "$cyan 99)$reset Keluar"
 sleep 1
@@ -191,7 +196,7 @@ rm -r ltc.zip
 rm -f -r /data/data/com.termux/files/home/Ltcclickbot
 echo "$cyan Tuh udah ke install LTC Click Botnya Bos ku :* "
 sleep 0.5
-echo "$cyan Cara Pakek nya Tinggal Ketik python main.py +62 no agan "
+echo "$cyan Cara Pakek nya Tinggal Ketik(cd ltc && python main.py +62 no agan) "
 sleep 5
 exit
 fi
@@ -217,8 +222,34 @@ rm -r doge.zip
 rm -f -r /data/data/com.termux/files/home/DogeClickBot
 echo "$cyan Tuh udah ke install Doge Click Botnya Bos ku :* "
 sleep 0.5
-echo "$cyan Cara Pakek nya Tinggal Ketik python main.py +62 no agan "
+echo "$cyan Cara Pakek nya Tinggal Ketik(cd doge && python main.py +62 no agan) "
 sleep 5
+exit
+fi
+
+if [ $telgram = 3 ] || [ $telgram = 03 ]
+then
+clear
+echo "Installing BCH Click Bot"
+apt update && apt upgrade
+apt install php
+apt install git
+apt install python
+pip install --upgrade pip
+git clone https://github.com/kadal15/BCHClickBot.git
+cd BCHClickBot
+mv -f bch.zip /data/data/com.termux/files/home
+cd
+unzip bch.zip
+cd bch
+pip install -r requirements.txt
+cd
+rm -f -r BCHClickBot
+rm -r bch.zip
+sleep 0.5
+echo "$cyan tuh gan udah ke install BCH Click Bot Bos q :* "
+sleep 0.5
+echo "$cyan cara pemakaian cukup ketik 'cd bch && python main.py +62(no agan)' "
 exit
 fi
 
@@ -236,6 +267,7 @@ sleep 1
 clear
 echo " 3"
 sleep 1
+
 clear
 echo " GOOD BYE (T_T) "
 sleep 1
@@ -410,12 +442,11 @@ then
 clear
 apt install python2
 apt install python2-dev
-apt install wget
+apt install git
 pip2 install mechanize
-mkdir fbbrute
-cd ~/fbbrute
-wget https://pastebin.com/raw/aqMBt2xA -O fbbrute.py
-chmod 777 fbbrute.py
+git clone https://github.com/kadal15/MBF
+cd ~/MBF
+mv -f password.txt $HOME
 cd ~/
 echo " Tuh fbbrute nya udah ke install Bos ku :* "
 fi
@@ -443,7 +474,7 @@ cd ~/lokmed
 wget https://pastebin.com/raw/sPpJRjCZ -O lokmed.php
 chmod 777 lokmed.php
 cd ~/
-echo " Tuh Ngrok nya udah ke install Bos ku :* "
+echo " Tuh udah ke install Bos ku :* "
 fi
 
 if [ $pil = 17 ] || [ $pil = 17  ]
@@ -453,7 +484,7 @@ apt update && apt upgrade
 apt install python2
 apt install git
 git clone https://github.com/UltimateHackers/Hash-Buster
-echo " Tuh Ngrok nya udah ke install Bos ku :* "
+echo " Tuh udah ke install Bos ku :* "
 fi
 
 if [ $pil = 18 ] || [ $pil = 18 ]
